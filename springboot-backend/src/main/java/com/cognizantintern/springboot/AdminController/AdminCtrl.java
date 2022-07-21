@@ -1,4 +1,4 @@
-package net.javaguides.springboot.AdminController;
+package com.cognizantintern.springboot.AdminController;
 
 
 
@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.javaguides.springboot.loginRepository.AdminRepository;
-import net.javaguides.springboot.Adminlogin.Admin;
-//import net.javaguides.springboot.exception.ResourceNotFoundException;
+import com.cognizantintern.springboot.Adminlogin.Admin;
+import com.cognizantintern.springboot.loginRepository.AdminRepository;
 
 @CrossOrigin
 @RestController

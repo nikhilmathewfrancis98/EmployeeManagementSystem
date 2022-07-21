@@ -1,4 +1,4 @@
-package net.javaguides.springboot.Adminlogin;
+package com.cognizantintern.springboot.Adminlogin;
 
 
 import javax.persistence.Entity;

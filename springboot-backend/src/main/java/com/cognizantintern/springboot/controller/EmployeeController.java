@@ -1,4 +1,4 @@
-package net.javaguides.springboot.controller;
+package com.cognizantintern.springboot.controller;
 
 import java.util.HashMap;
 import java.util.List;
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.javaguides.springboot.exception.ResourceNotFoundException;
-import net.javaguides.springboot.model.Employee;
-import net.javaguides.springboot.repository.EmployeeRepository;
+import com.cognizantintern.springboot.exception.ResourceNotFoundException;
+import com.cognizantintern.springboot.model.Employee;
+import com.cognizantintern.springboot.repository.EmployeeRepository;
 
 @CrossOrigin
 @RestController
