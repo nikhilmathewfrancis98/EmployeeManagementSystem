@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import EmployeeService from '../services/EmployeeService'
 import HeaderComponent from "./HeaderComponent";
+// import { confirmAlert } from 'react-confirm-alert'; 
+// import 'react-confirm-alert/src/react-confirm-alert.css'
 
 class DeletePanel extends Component {
     constructor(props) {
@@ -12,12 +14,41 @@ class DeletePanel extends Component {
         // this.addEmployee = this.addEmployee.bind(this);
         // this.editEmployee = this.editEmployee.bind(this);
         this.deleteEmployee = this.deleteEmployee.bind(this);
+    
     }
-
+   
     deleteEmployee(id) {
-        EmployeeService.deleteEmployee(id).then(res => {
-            this.setState({ employees: this.state.employees.filter(employee => employee.id !== id) });
-        });
+        // confirmAlert({
+        //     title: 'Confirm to submit',
+        //     message: 'Are you sure to do this.',
+        //     buttons: [
+        //         {
+        //             label: 'Yes',
+        //             onClick: () => {EmployeeService.deleteEmployee(id).then(res => {
+        //                 this.setState({ employees: this.state.employees.filter(employee => employee.id !== id) });
+
+        //             });}
+        //         },
+        //         {
+        //             label: 'No',
+        //             onClick: () => alert('Click No')
+        //         }
+        //     ]
+        // })
+        var r = window.confirm("Are you sure you want to Delete this record");
+        
+        if (r === true) {
+            
+            EmployeeService.deleteEmployee(id).then(res => {
+                this.setState({ employees: this.state.employees.filter(employee => employee.id !== id) });
+                
+            });
+            // alert('Employee Deleted Successfully');
+        }
+        else {
+            alert('Employee not Deleted');
+        }
+       
     }
     // viewEmployee(id) {
     //     this.props.history.push(`/view-employee/${id}`);

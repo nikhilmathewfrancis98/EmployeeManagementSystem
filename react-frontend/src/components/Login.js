@@ -36,7 +36,8 @@ const Login = () => {
                 setUsername('');
                 setPassword('');
                 history.push('/employees');
-            } else if (res.status === 404){
+            } else {
+                window.confirm("Invalid username or password");
                 setErrorMsg("Invalid username or password");
                 // errRef.current.focus();
             }
